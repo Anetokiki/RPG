@@ -1,0 +1,582 @@
+#include<iostream>
+using namespace std;
+double shengmingli = 2000;
+int gongjili = 150;
+int fangyuli = 200;
+int money = 99999999;
+bool guoguan;
+void wuqidian();
+//void yaodian();
+void guaiwu1();
+//void guaiwu2();
+int main(void)
+{
+    cout << "歡迎來到中國文化大學！\n";
+    cout << "一個歷史悠久的大學，周圍有美食街，美食街的旁邊有一片地，裡面有房子和人。\n有一些社團" << endl;
+    cout << "還有其他更多的活動.\n\n";
+    int xiaozhen;
+    cout << "1.去參加活動" << endl;
+    //cout << "2.去药品店" << endl;
+    //cout << "3.去打小怪物" << endl;
+    //cout << "4.去打大怪物" << endl;
+    cout << "5.回家休息!" << endl;
+    cout << "6.顯示你的狀態" << endl;
+    cin >> xiaozhen;
+      while (xiaozhen != 5)
+    {
+        if (shengmingli <= 0)
+        {
+            cout << "你死了！" << endl;
+            break;
+        }
+        else  if (guoguan)
+        {
+            cout << "恭喜通關！" << endl;
+            break;
+        }
+
+        else if (xiaozhen == 6)
+        {
+            cout << "你的健康：" << shengmingli << endl;
+            cout << "你的智慧：" << gongjili << endl;
+            cout << "你的心情：" << fangyuli << endl;
+            //cout << "你的财富：" << money << endl;
+
+        }
+
+        else  switch (xiaozhen)
+        {
+        case 1:wuqidian(); break;
+        //case 2:yaodian();  break;
+        //case 3:guaiwu1();  break;
+        //case 4:guaiwu2();  break;
+        default: cout << "請不要亂選！" << endl; break;
+        }
+        cin >> xiaozhen;
+    }
+
+    if (xiaozhen == 5)
+    {
+        cout << "準備回家休息" << endl;
+    }
+    cin.get();
+    cin.get();
+    return 0;
+
+}
+
+void wuqidian()
+{
+    cout << "今天要做甚麼好呢?" << endl;
+    cout << "1、睡覺" << endl;
+    cout << "2、運動" << endl;
+    cout << "3、夜唱" << endl;
+    cout << "4、打遊戲" << endl;
+    cout << "5、課業學習" << endl;
+    cout << "6、社團活動" << endl;
+    cout << "7、離開活動場所" << endl;
+    int wuqidian;
+    cin >> wuqidian;
+    while (wuqidian != 7)
+    {
+        switch (wuqidian)
+        {
+        case 1:if (money < 10)
+        {
+            cout << "" << endl;
+            
+            break;
+        }
+              else
+        {
+            cout << "好好玩喔！" << endl;
+            cout << "1、睡覺" << endl;
+            cout << "2、運動" << endl;
+            cout << "3、夜唱" << endl;
+            cout << "4、打遊戲" << endl;
+            cout << "5、課業學習" << endl;
+            cout << "6、社團活動" << endl;
+            cout << "7、離開活動場所" << endl;
+            shengmingli += 2;
+            gongjili += 1;
+            fangyuli += 0;
+            money -= 10;
+            cout << "健康為" << shengmingli << endl;
+            cout << "智力為" << gongjili << endl;
+            //cout << "心情為" << fangyuli << endl;
+            //cout << "還剩下" << money << "元" << endl;
+            break;
+        }
+        case 2: if (money < 80)
+        {
+            cout << " " << endl;
+            
+            break;
+        }
+              else
+        {
+            cout << "好好玩喔！" << endl;
+            cout << "1、睡覺" << endl;
+            cout << "2、運動" << endl;
+            cout << "3、夜唱" << endl;
+            cout << "4、打遊戲" << endl;
+            cout << "5、課業學習" << endl;
+            cout << "6、社團活動" << endl;
+            cout << "7、離開活動場所" << endl;
+            shengmingli += 2;
+            gongjili += 0;
+            fangyuli += 1;
+            money -= 10;
+            cout << "健康為" << shengmingli << endl;
+            //cout << "智力為" << gongjili << endl;
+            cout << "心情為" << fangyuli << endl;
+            //cout << "還剩下" << money << "元" << endl;
+            break;
+        }
+        case 3:if (money < 140)
+        {
+            cout << "" << endl;
+            
+            break;
+        }
+              else
+        {
+            cout << "好好玩喔！" << endl;
+            cout << "1、睡覺" << endl;
+            cout << "2、運動" << endl;
+            cout << "3、夜唱" << endl;
+            cout << "4、打遊戲" << endl;
+            cout << "5、課業學習" << endl;
+            cout << "6、社團活動" << endl;
+            cout << "7、離開活動場所" << endl;
+            shengmingli += -2;
+            gongjili += 0;
+            fangyuli += 2;
+            money -= 10;
+            cout << "健康為" << shengmingli << endl;
+            //cout << "智力為" << gongjili << endl;
+            cout << "心情為" << fangyuli << endl;
+            //cout << "還剩下" << money << "元" << endl;
+            break;
+        }
+        case 4:if (money < 200)
+        {
+            cout << "" << endl;
+            
+            break;
+        }
+              else
+        {
+            cout << "好好玩喔！" << endl;
+            cout << "1、睡覺" << endl;
+            cout << "2、運動" << endl;
+            cout << "3、夜唱" << endl;
+            cout << "4、打遊戲" << endl;
+            cout << "5、課業學習" << endl;
+            cout << "6、社團活動" << endl;
+            cout << "7、離開活動場所" << endl;
+            shengmingli += -2;
+            gongjili += -1;
+            fangyuli += 3;
+            money -= 10;
+            cout << "健康為" << shengmingli << endl;
+            cout << "智力為" << gongjili << endl;
+            cout << "心情為" << fangyuli << endl;
+            //cout << "還剩下" << money << "元" << endl;
+            break;
+        }
+        case 5:if (money < 60)
+        {
+            cout << "" << endl;
+            
+            break;
+        }
+              else
+        {
+            cout << "好好玩喔！" << endl;
+            cout << "1、睡覺" << endl;
+            cout << "2、運動" << endl;
+            cout << "3、夜唱" << endl;
+            cout << "4、打遊戲" << endl;
+            cout << "5、課業學習" << endl;
+            cout << "6、社團活動" << endl;
+            cout << "7、離開活動場所" << endl;
+            shengmingli += 0;
+            gongjili += 3;
+            fangyuli += -2;
+            money -= 10;
+            //cout << "健康為" << shengmingli << endl;
+            cout << "智力為" << gongjili << endl;
+            cout << "心情為" << fangyuli << endl;
+            //cout << "還剩下" << money << "元" << endl;
+            break;
+        }
+        case 6:if (money < 100)
+        {
+            cout << "" << endl;
+            
+            break;
+        }
+              else
+        {
+            cout << "好好玩喔！" << endl;
+            cout << "1、睡覺" << endl;
+            cout << "2、運動" << endl;
+            cout << "3、夜唱" << endl;
+            cout << "4、打遊戲" << endl;
+            cout << "5、課業學習" << endl;
+            cout << "6、社團活動" << endl;
+            cout << "7、離開活動場所" << endl;
+            shengmingli += 1;
+            gongjili += 0;
+            fangyuli += 1;
+            money -= 10;
+            cout << "健康為" << shengmingli << endl;
+            //cout << "智力為" << gongjili << endl;
+            cout << "心情為" << fangyuli << endl;
+            //cout << "還剩下" << money << "元" << endl;
+            break;
+        }
+        default: cout << "不要調皮" << endl;
+            cout << "請重新選擇！" << endl;
+            cout << "1、睡覺" << endl;
+            cout << "2、運動" << endl;
+            cout << "3、夜唱" << endl;
+            cout << "4、打遊戲" << endl;
+            cout << "5、課業學習" << endl;
+            cout << "6、社團活動" << endl;
+            cout << "7、離開活動場所" << endl;
+            break;
+        }
+        cin >> wuqidian;
+    }
+    if (wuqidian == 7)
+    {
+        cout << "歡迎來到中國文化大學！" << endl;
+        cout << "一個歷史悠久的大學，周圍有美食街，美食街的旁邊有一片地，裡面有房子和人。！\n";
+        cout << "有一些社團" << endl;
+        cout << "還有其他更多的活動.\n";
+
+        cout <<" 1.去參加活動\n";
+        cout << "5.回家休息!\n";
+        cout << "6.顯示你的狀態 \n";
+        /*cout << "欢迎下次再来！" << endl;
+        cout << "欢迎你来到游戏世界！\n";
+        cout << "小镇\n";
+        cout << "一个古老的小镇，周围有一条河，河的旁边有一片树林，里面有许多房子和人。\n有一家药店" << endl;
+        cout << "还有一家武器店.\n";
+        cout << "1.去武器店" << endl;
+        cout << "2.去药品店" << endl;
+        cout << "3.去打小怪物" << endl;
+        cout << "4.去打大怪物" << endl;
+        cout << "5.退出游戏" << endl;
+        cout << "6.显示你的状态" << endl; */
+    }
+
+}
+/*void yaodian()
+{
+    cout << "欢迎来到药品店！" << endl;
+    cout << "1、小血包（10M加200生命力）" << endl;
+    cout << "2、中血包（50M加1000攻击力）" << endl;
+    cout << "3、大血包（100M加2200攻击力）" << endl;
+    cout << "4、离开药品" << endl;
+    int yaodian;
+    cin >> yaodian;
+    while (yaodian != 4)
+    {
+        switch (yaodian)
+        {
+        case 1:if (money < 10)
+        {
+            cout << "你的钱不够" << endl;
+            cout << "请重新选择！" << endl;
+            cout << "1、小血包（10M加200生命力）" << endl;
+            cout << "2、中血包（50M加1000攻击力）" << endl;
+            cout << "3、大血包（100M加2200攻击力）" << endl;
+            cout << "4、离开药品" << endl;
+            break;
+        }
+              else
+        {
+            cout << "购买成功！" << endl;
+            cout << "1、小血包（10M加200生命力）" << endl;
+            cout << "2、中血包（50M加1000生命力）" << endl;
+            cout << "3、大血包（100M加2200生命力）" << endl;
+            cout << "4、离开药品" << endl;
+            shengmingli += 200;
+            money -= 10;
+            cout << "还剩下" << money << "元" << endl;
+            break;
+        }
+        case 2: if (money < 50)
+        {
+            cout << "你的钱不够" << endl;
+            cout << "请从新选择！" << endl;
+            cout << "1、小血包（10M加200生命力）" << endl;
+            cout << "2、中血包（50M加1000生命力）" << endl;
+            cout << "3、大血包（100M加2200生命力）" << endl;
+            cout << "4、离开药品" << endl;
+        }
+              else
+        {
+            cout << "购买成功！" << endl;
+            cout << "1、小血包（10M加200生命力）" << endl;
+            cout << "2、中血包（50M加1000生命力）" << endl;
+            cout << "3、大血包（100M加2200生命力）" << endl;
+            cout << "4、离开药品" << endl;
+            shengmingli += 1000;
+            money -= 50;
+            cout << "还剩下" << money << "元" << endl;
+            break;
+        }
+        case 3:if (money < 100)
+        {
+            cout << "你的钱不够" << endl;
+            cout << "请重新选择" << endl;
+            cout << "1、小血包（10M加200生命力）" << endl;
+            cout << "2、中血包（50M加1000生命力）" << endl;
+            cout << "3、大血包（100M加2200生命力）" << endl;
+            cout << "4、离开药品" << endl;
+        }
+              else
+        {
+            cout << "购买成功！" << endl;
+            cout << "1、小血包（10M加200生命力）" << endl;
+            cout << "2、中血包（50M加1000生命力）" << endl;
+            cout << "3、大血包（100M加2200生命力）" << endl;
+            cout << "4、离开药品" << endl;
+            shengmingli += 2200;
+            money -= 100;
+            cout << "还剩下" << money << "元" << endl;
+            break;
+        }
+        default:cout << " " << endl;
+            break;
+        }
+        cin >> yaodian;
+    }
+    if (yaodian == 4)
+    {
+        cout << "欢迎下次再来！" << endl;
+        cout << "欢迎你来到游戏世界！\n";
+        cout << "小镇\n";
+        cout << "一个古老的小镇，周围有一条河，河的旁边有一片树林，里面有许多房子和人。\n有一家药店" << endl;
+        cout << "还有一家武器店.\n";
+        cout << "1.去武器店" << endl;
+        cout << "2.去药品店" << endl;
+        cout << "3.去打小怪物" << endl;
+        cout << "4.去打大怪物" << endl;
+        cout << "5.退出游戏" << endl;
+        cout << "6.显示你的状态" << endl;
+    }
+}*/
+/*void guaiwu1()
+{
+    cout << "开始与小怪物战斗！！！" << endl;
+    double* g_shengmingli = new double;
+    int* g_gongjili = new int;
+    int* g_fangyuli = new int;
+    int* g_money = new int;
+    *g_shengmingli = 100;
+    *g_gongjili = 5;
+    *g_fangyuli = 3;
+    *g_money = 5;
+    double* gongji1 = new double;
+    double* gongji2 = new double;
+    *gongji1 = 0;
+    *gongji2 = 0;
+    int* huihe = new int;
+    *huihe = 1;
+    cout << "你开始对小怪物进行攻击！" << endl;
+    int* xuanze = new int;
+
+    while ((*g_shengmingli) > 0 && shengmingli > 0 && (*xuanze) != 2)
+    {
+        cout << "现在是" << "第" << *huihe << "回合" << endl;
+        cout << "请选择你的动作:\n";
+        cout << "1、攻击\n2、逃跑\n";
+        cin >> *xuanze;
+        switch ((*xuanze))
+        {
+        case 1:cout << "你对小怪物发起了进攻！" << endl;
+            *g_shengmingli -= (gongjili * 2) - (*g_fangyuli);
+            *gongji1 = (gongjili * 2) - (*g_fangyuli);
+            cout << "你打掉了怪物1:" << *gongji1 << "的生命" << endl;
+            cout << "怪物1还剩" << *g_shengmingli << "的生命" << endl;
+            shengmingli = shengmingli - ((*g_gongjili * 2) - fangyuli);
+            *gongji2 = (*g_gongjili * 2) - fangyuli;
+            if ((*g_shengmingli <= 0))
+            {
+                cout << "太棒了！你打败了小怪物！"; break;
+            }
+            else
+            {
+                cout << "小怪物对你发起了进攻！" << endl;
+                cout << "小怪物打掉你" << *gongji2 << "的生命" << endl;
+                cout << "你还剩" << shengmingli << "的生命" << endl;
+                continue;
+            }
+        case 2:cout << "你决定逃跑" << endl;
+            cout << "逃跑成功！" << endl; continue;
+        default: cout << "不要乱来！" << endl;
+        }
+        if (*xuanze == 1)
+        {
+            if (*g_shengmingli <= 0)
+            {
+                cout << " \n" << endl;
+            }
+            else
+            {
+                (*huihe)++;
+                cout << "第" << (*huihe) << "回合" << endl;
+            }
+        }
+    }
+    if ((*g_shengmingli) <= 0)
+    {
+
+        money += (*g_money);
+        cout << "你拥有\n" << money << "的金币" << endl;
+        cout << "欢迎你来到游戏世界！\n";
+        cout << "小镇\n";
+        cout << "一个古老的小镇，周围有一条河，河的旁边有一片树林，里面有许多房子和人。\n有一家药店" << endl;
+        cout << "还有一家武器店.\n";
+        cout << "1.去武器店" << endl;
+        cout << "2.去药品店" << endl;
+        cout << "3.去打小怪物" << endl;
+        cout << "4.去打大怪物" << endl;
+        cout << "5.退出游戏" << endl;
+        cout << "6.显示你的状态" << endl;
+    }
+    else if (shengmingli <= 0)
+    {
+        cout << "你被怪物杀死了！" << endl;
+    }
+    else if ((*xuanze) == 2)
+    {
+        cout << "逃跑成功！" << endl;
+        cout << "欢迎你来到游戏世界！\n";
+        cout << "小镇\n";
+        cout << "一个古老的小镇，周围有一条河，河的旁边有一片树林，里面有许多房子和人。\n有一家药店" << endl;
+        cout << "还有一家武器店.\n";
+        cout << "1.去武器店" << endl;
+        cout << "2.去药品店" << endl;
+        cout << "3.去打小怪物" << endl;
+        cout << "4.去打大怪物" << endl;
+        cout << "5.退出游戏" << endl;
+        cout << "6.显示你的状态" << endl;
+    }
+    delete g_shengmingli;
+    delete g_gongjili;
+    delete g_fangyuli;
+    delete g_money;
+    delete gongji1;
+    delete gongji2;
+}
+void guaiwu2()
+{
+    cout << "开始与大怪物战斗！！！" << endl;
+    double* g_shengmingli = new double;
+    int* g_gongjili = new int;
+    int* g_fangyuli = new int;
+    int* g_money = new int;
+    *g_shengmingli = 3600;
+    *g_gongjili = 50;
+    *g_fangyuli = 30;
+    *g_money = 50;
+    double* gongji1 = new double;
+    double* gongji2 = new double;
+    *gongji1 = 0;
+    *gongji2 = 0;
+    int* huihe = new int;
+    *huihe = 1;
+    cout << "你开始对大怪物进行攻击！" << endl;
+    int* xuanze = new int;
+
+    while ((*g_shengmingli) > 0 && shengmingli > 0 && (*xuanze) != 2)
+    {
+        cout << "现在是" << "第" << *huihe << "回合" << endl;
+        cout << "请选择你的动作:\n";
+        cout << "1、攻击\n2、逃跑\n";
+        cin >> *xuanze;
+        switch ((*xuanze))
+        {
+        case 1:cout << "你对大怪物发起了进攻！" << endl;
+            *g_shengmingli -= (gongjili * 2) - (*g_fangyuli);
+            *gongji1 = (gongjili * 2) - (*g_fangyuli);
+            cout << "你打掉了大怪物" << *gongji1 << "的生命" << endl;
+            cout << "怪物还剩" << *g_shengmingli << "的生命" << endl;
+            shengmingli -= ((*g_gongjili * 2) - fangyuli);
+            *gongji2 = (*g_gongjili * 2) - fangyuli;
+            if ((*g_shengmingli <= 0))
+            {
+                cout << "太棒了！你打败了小怪物！"; break;
+            }
+            else
+            {
+                cout << "大怪物对你发起了进攻！" << endl;
+                cout << "大怪物打掉你" << (*gongji2) << "的生命" << endl;
+                cout << "你还剩" << shengmingli << "的生命" << endl;
+                continue;
+            }
+        case 2:cout << "你决定逃跑" << endl;
+            cout << "逃跑成功！" << endl; continue;
+        default: cout << "不要乱来！" << endl; continue;
+        }
+        if (*xuanze == 1)
+        {
+            if (*g_shengmingli <= 0)
+            {
+                cout << " \n" << endl;
+            }
+            else
+            {
+                (*huihe++);
+                cout << "第" << (*huihe) << "回合" << endl;
+            }
+        }
+    }
+    if ((*g_shengmingli) <= 0)
+    {
+        money += (*g_money);
+        cout << "太棒了，你打败了敌人！" << endl;
+        cout << "你拥有\n" << money << "的金币" << endl;
+        guoguan = true;
+        cout << "欢迎你来到游戏世界！\n";
+        cout << "小镇\n";
+        cout << "一个古老的小镇，周围有一条河，河的旁边有一片树林，里面有许多房子和人。\n有一家药店" << endl;
+        cout << "还有一家武器店.\n";
+        cout << "1.去武器店" << endl;
+        cout << "2.去药品店" << endl;
+        cout << "3.去打小怪物" << endl;
+        cout << "4.去打大怪物" << endl;
+        cout << "5.退出游戏" << endl;
+        cout << "6.显示你的状态" << endl;
+    }
+    else if (shengmingli <= 0)
+    {
+        cout << "你被怪物杀死了！" << endl;
+    }
+    else if ((*xuanze) == 2)
+    {
+        cout << "逃跑成功！" << endl;
+        cout << "欢迎你来到游戏世界！\n";
+        cout << "小镇\n";
+        cout << "一个古老的小镇，周围有一条河，河的旁边有一片树林，里面有许多房子和人。\n有一家药店" << endl;
+        cout << "还有一家武器店.\n";
+        cout << "1.去武器店" << endl;
+        cout << "2.去药品店" << endl;
+        cout << "3.去打小怪物" << endl;
+        cout << "4.去打大怪物" << endl;
+        cout << "5.退出游戏" << endl;
+        cout << "6.显示你的状态" << endl;
+    }
+    delete g_shengmingli;
+    delete g_gongjili;
+    delete g_fangyuli;
+    delete g_money;
+    delete gongji1;
+    delete gongji2;
+}*/
